@@ -28,6 +28,30 @@
     <Filter Include="VisualGDB settings">
       <UniqueIdentifier>{dd88e6eb-c665-4b5a-8212-d3ab0090cbff}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source files\User">
+      <UniqueIdentifier>{cc2b513c-d111-40ce-9997-7c4406f929b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\User\flash">
+      <UniqueIdentifier>{5672d93a-1d94-4e48-8c8c-01018033fca7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\User\led">
+      <UniqueIdentifier>{36c16c35-6a06-4c1e-bcf1-0d511a78814a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source files\User\usart">
+      <UniqueIdentifier>{a606bd62-2e00-4cf2-b9f0-1151775b5c00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\User">
+      <UniqueIdentifier>{40302718-fe82-4c57-9b2b-7f595d1bc9b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\User\flash">
+      <UniqueIdentifier>{e5a98f6a-459c-4c4a-bcd4-80562f160f2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\User\led">
+      <UniqueIdentifier>{ed367250-fd6d-40e5-abc0-c1af6145f8a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files\User\usart">
+      <UniqueIdentifier>{ae71ec1c-177f-42a9-aa76-ad48b9af867d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LEDBlink.c">
@@ -336,5 +360,34 @@
     <None Include="stm32.xml">
       <Filter>VisualGDB settings</Filter>
     </None>
+    <ClCompile Include="User\flash\bsp_spi_flash.c">
+      <Filter>Source files\User\flash</Filter>
+    </ClCompile>
+    <ClCompile Include="User\led\bsp_led.c">
+      <Filter>Source files\User\led</Filter>
+    </ClCompile>
+    <ClCompile Include="User\usart\bsp_debug_usart.c">
+      <Filter>Source files\User\usart</Filter>
+    </ClCompile>
+    <ClCompile Include="stm32f4xx_it.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="User\flash\bsp_spi_flash.h">
+      <Filter>Header files\User\flash</Filter>
+    </ClInclude>
+    <ClInclude Include="User\led\bsp_led.h">
+      <Filter>Header files\User\led</Filter>
+    </ClInclude>
+    <ClInclude Include="User\usart\bsp_debug_usart.h">
+      <Filter>Header files\User\usart</Filter>
+    </ClInclude>
+    <ClInclude Include="stm32f4xx_conf.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="stm32f4xx_it.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
