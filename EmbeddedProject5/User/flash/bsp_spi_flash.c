@@ -118,13 +118,28 @@ uint32_t SPI_FLASH_ReadJedecDevID(void)
 {
 	uint8_t tmp[3];
 	uint32_t devID;
+	SPI_FLASH_CS_LOW();
 	SPI_FLASH_ReadWriteByte(W25X_JedecDeviceID);
 	tmp[0] = SPI_FLASH_ReadWriteByte(Dummy_Byte);
 	tmp[1] = SPI_FLASH_ReadWriteByte(Dummy_Byte);
 	tmp[2] = SPI_FLASH_ReadWriteByte(Dummy_Byte);
+	SPI_FLASH_CS_HIGH();
 	devID = (tmp[0] << 16) | (tmp[1] << 8) | tmp[2];
 	return devID;
 
+}
+
+uint32_t SPI_FLASH_ReadDevID(void)
+{
+	uint32_t DevID;
+	SPI_FLASH_CS_LOW();
+	SPI_FLASH_ReadWriteByte(W25X_DeviceID);
+	SPI_FLASH_ReadWriteByte(Dummy_Byte);
+	SPI_FLASH_ReadWriteByte(Dummy_Byte);
+	SPI_FLASH_ReadWriteByte(Dummy_Byte);
+	DevID = SPI_FLASH_ReadWriteByte(Dummy_Byte);
+	SPI_FLASH_CS_HIGH();
+	return DevID;
 }
 
  /**
